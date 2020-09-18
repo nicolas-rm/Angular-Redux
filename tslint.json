@@ -145,7 +145,7 @@
       "template-no-negated-async": true,
       "use-lifecycle-interface": false,
       "use-pipe-transform-interface": true,
-      "disable-next-line": false,
+      "disable-next-line": true,
       "no-trailing-whitespace": false,
       "ban-types": false
    },
