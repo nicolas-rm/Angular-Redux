@@ -1,6 +1,6 @@
 import { state } from '@angular/animations';
 import { Action, createReducer, on } from '@ngrx/store';
-import { incrementar, decrementar, multiplicar, dividir } from './contador.actions';
+import { incrementar, decrementar, multiplicar, dividir, reset } from './contador.actions';
 
 
 // export function contadorReducer(state: number = 10, action: Action) {
@@ -26,7 +26,8 @@ const _contadoReducer = createReducer(
   on(incrementar, state => state + 1),
   on(decrementar, state => state - 1),
   on(multiplicar, (state, { numero }) => state * numero),
-  on(dividir, (state, { numero }) => state / numero)
+  on(dividir, (state, { numero }) => state / numero),
+  on(reset, (state, { numero }) => state = numero)
   );
 
 export function contadorReducer(state, action) {
